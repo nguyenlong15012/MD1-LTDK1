@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            color: #0004ff;
+        }
+    </style>
+</head>
+<body>
+<h1>Số tiền bạn nhận đc là: <p id="ts"></p>
+</h1>
+<script>
+
+    // 0 đến 300.000 => 3%
+    // 300.000 đến 500.000 => 4%
+    // 500.000 =>  6%
+    //300.000 x 3% + (500.000 – 300.000) x 4% + (900.000 – 500.000) x 6% = 41.000 đồng. (VD = 900)
+
+    let a = +prompt('Nhập tổng tiền hóa đơn: ');
+    let A, B, C ,D;
+
+    A = (a/100)*3;
+    B = (a/100)*4;
+    // C = (a/100)*6;
+    C = 300000*3/100 + (500000 - 300000)*4/100 + (a-500000)*6/100;
+    D = a*5/100
+
+    if(a<300000){
+        document.getElementById('ts').innerHTML = A + 'VNĐ';
+    }else if(a>=300000 && a<500000){
+        document.getElementById('ts').innerHTML = B + 'VNĐ';
+    }else if(a>=500000 && a<1500000){
+        document.getElementById('ts').innerHTML = C + 'VNĐ';
+    }else {
+        document.getElementById('ts').innerHTML = D + 'VNĐ';
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="ts"></h1>
+<script>
+    let diemTB1;
+    let diemTB2;
+    let dtb;
+
+
+    a = +prompt('Nhập điểm Trung Bình Học kỳ 1: ', diemTB1);
+    b = +prompt('Nhập điểm Trung Bình Học Kỳ 2: ', diemTB2);
+
+    c = dtb;
+
+    c = (a+2*b)/3;
+
+    // hocluc = document.getElementById('ts').innerHTML;
+
+    if(c>=8){
+        document.getElementById('ts').innerHTML = 'Bạn học sinh GIỎI!';
+    }else if(8>c && c>=6.5){
+        document.getElementById('ts').innerHTML = 'Bạn học sinh KHÁ';
+    }else if(c<6.5 && c>5.0){
+        document.getElementById('ts').innerHTML = 'Bạn học sinh TRUNG BÌNH';
+    }else {
+        document.getElementById('ts').innerHTML = 'HS Yếu';
+    }
+
+</script>
+</body>
+</html>

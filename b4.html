@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="ts"></h1>
+<script>
+    let a = +prompt('Nhập số a = ');
+    let b = +prompt('Nhập số b = ');
+    let c = +prompt('Nhập số c = ');
+
+    if(a>b){
+        if(a>c){
+            document.getElementById('ts').innerHTML = 'Số lớn nhất là: ' + a;
+        }else {
+            document.getElementById('ts').innerHTML = 'Số lớn nhất là: ' + c;
+        }
+    }else {
+        if(b>c){
+            document.getElementById('ts').innerHTML = 'Số lớn nhất là: ' + b;
+        }else {
+            document.getElementById('ts').innerHTML = 'Số lớn nhất là: ' + c;
+        }
+    }
+</script>
+</body>
+</html>
